@@ -91,17 +91,46 @@
       color: #8B4513;
       margin-right: 8px;
     }
-    /* 封面 */
-    .cover-main {
+    /* 封面 - 整体居中 */
+    section.cover {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    section.cover .cover-main {
+      flex: 0 1 auto;
       max-width: 800px;
+      margin: 0 auto;
+      padding: 2em 1em;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
     }
-    .cover-main h1 {
-      font-size: 2.5em;
+    section.cover .cover-main h1 {
+      font-size: 2.8em;
       color: #8B4513;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6em;
+      border-bottom: none;
     }
-    .cover-main p {
+    section.cover .cover-main p {
       font-size: 1.1em;
       line-height: 1.8;
+    }
+    section.cover .cover-main a {
+      border: 2px solid #8B4513 !important;
+      color: #8B4513 !important;
+      padding: 0.6em 2em !important;
+      font-size: 1em !important;
+      transition: all 0.2s;
+    }
+    section.cover .cover-main a:hover {
+      background: #8B4513 !important;
+      color: #fff !important;
     }
     /* 搜索 */
     .search {
