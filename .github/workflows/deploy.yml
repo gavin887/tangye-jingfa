@@ -1,0 +1,52 @@
+# 方案一（推荐）：Docsify —— 零构建，直接部署 docs/ 文件夹
+# 使用方法：在 GitHub 仓库 Settings > Pages > Source 选择 "Deploy from branch" > main > /docs
+# 无需此 workflow，仅需确保 docs/.nojekyll 文件存在
+
+# 方案二（进阶）：MkDocs Material —— 构建后部署，更丰富的主题和搜索
+# 如需启用，将以下内容取消注释，并安装依赖：
+# pip install mkdocs mkdocs-material
+# 然后在仓库 Settings > Pages > Source 选择 "GitHub Actions"
+
+name: Deploy MkDocs to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install MkDocs
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-minify-plugin
+      - name: Build site
+        run: mkdocs build --site-dir ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>汤液经法拟补</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="张大昌《汤液经法拟补》修订版 - 在线阅读与检索">
+
+  <!-- Docsify Core -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  
+  <!-- 自定义样式 -->
+  <style>
+    :root {
+      --theme-color: #8B4513;
+      --sidebar-width: 18rem;
+    }
+    .sidebar-nav li {
+      margin: 0.4em 0;
+    }
+    .sidebar-nav li a {
+      font-size: 0.95em;
+      color: #333;
+    }
+    .sidebar-nav ul ul li a {
+      padding-left: 1.2em;
+      font-size: 0.88em;
+      color: #666;
+    }
+    .markdown-section h1 {
+      color: #8B4513;
+      border-bottom: 2px solid #8B4513;
+      padding-bottom: 0.3em;
+    }
+    .markdown-section h2 {
+      color: #6B3410;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.2em;
+    }
+    .markdown-section h3 {
+      color: #5A2D0E;
+    }
+    .markdown-section pre {
+      background: #f8f5f0;
+      border-left: 3px solid #8B4513;
+    }
+    .markdown-section blockquote {
+      border-left: 4px solid #B8860B;
+      background: #fdfaf5;
+      color: #555;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+    }
+    .markdown-section th {
+      background: #8B4513;
+      color: white;
+      padding: 8px 12px;
+    }
+    .markdown-section td {
+      padding: 6px 12px;
+    }
+    /* 下载按钮 */
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: #8B4513;
+      color: white !important;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9em;
+      margin: 4px 0;
+      transition: background 0.2s;
+    }
+    .download-btn:hover {
+      background: #6B3410;
+    }
+    .download-bar {
+      margin: 1em 0;
+      padding: 0.8em 1em;
+      background: #fdfaf5;
+      border: 1px solid #e8d5c8;
+      border-radius: 6px;
+    }
+    .download-bar .label {
+      font-weight: bold;
+      color: #8B4513;
+      margin-right: 8px;
+    }
+    /* 封面 */
+    .cover-main {
+      max-width: 800px;
+    }
+    .cover-main h1 {
+      font-size: 2.5em;
+      color: #8B4513;
+    }
+    .cover-main p {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+    /* 搜索 */
+    .search {
+      margin: 0.5em 0.5em 1em;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- 配置 -->
+  <script>
+    window.$docsify = {
+      // 基础路径
+      basePath: '/tangye-jingfa/',
+      
+      // 文档标题
+      name: '汤液经法拟补',
+      nameLink: '/',
+      repo: '',
+
+      // 自动生成侧边栏
+      autoHeader: true,
+      loadSidebar: true,
+      loadNavbar: false,
+      subMaxLevel: 3,
+      maxLevel: 4,
+
+      // 封面
+      coverpage: '_coverpage',
+
+      // 全文搜索（中文分词友好）
+      search: {
+        maxAge: 86400000,          // 缓存一天
+        paths: 'auto',
+        placeholder: '搜索全文...',
+        noData: '未找到匹配结果',
+        depth: 4,
+        hideOtherSidebarContent: true,
+      },
+
+      // 代码高亮
+      highlight: {
+        lineNumbers: false,
+      },
+
+      // 支持中文字符锚点
+      formatUpdated: '{YYYY}-{MM}-{DD}',
+    };
+  </script>
+
+  <!-- 插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+
+  <!-- 自定义 Google 字体（中文优化） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</body>
+</html>

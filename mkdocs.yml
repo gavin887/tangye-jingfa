@@ -1,0 +1,69 @@
+site_name: 汤液经法拟补
+site_description: 张大昌《汤液经法拟补》修订版 - 在线阅读与检索
+site_author: 张大昌
+repo_url: ''
+repo_name: ''
+edit_uri: ''
+
+# 严格读取 docs/ 下的 markdown，不修改源文件
+docs_dir: docs
+
+theme:
+  name: material
+  language: zh
+  icon:
+    logo: material/book-open-variant
+    repo: fontawesome/brands/github
+  palette:
+    primary: brown
+    accent: amber
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+extra:
+  social:
+    - icon: fontawesome/solid/file-pdf
+      link: /tangye-jingfa/汤液经法拟补.修订版.20260628.pdf
+      name: 下载 PDF
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - footnotes
+  - attr_list
+
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s\-、，。：；]+'
+  - table-reader
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enabled: false
+
+nav:
+  - 首页: README.md
+  - 前言: 前言.md
+  - 自传与自序:
+      - 自传: 自传.md
+      - 自序: 自序.md
+  - 正文:
+      - 第一节 十二神方: 第一节-十二神方.md
+      - 第二节 神方释义: 第二节-神方释义.md
+      - 第三节 十方君臣佐使格式: 第三节-十方君臣佐使格式.md
+  - 附录:
+      - 十二神方对照表: 附录-十二神方对照表.md
+      - 张大昌先生侧记: 附篇-张大昌先生侧记.md
+
