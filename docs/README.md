@@ -20,8 +20,8 @@
 
 ## 资源下载
 
-- [📄 下载 PDF 原档](./汤液经法拟补.修订版.20260628.pdf)
-- [📁 下载所有 Markdown 源文件](https://github.com/gavin887/tangye-jingfa/archive/refs/heads/main.zip(将 USERNAME 替换为你的 GitHub 用户名)
+- [📄 下载 PDF 原档](https://raw.githubusercontent.com/gavin887/tangye-jingfa/main/docs/%E6%B1%A4%E6%B6%B2%E7%BB%8F%E6%B3%95%E6%8B%9F%E8%A1%A5.%E4%BF%AE%E8%AE%A2%E7%89%88.20260628.pdf)
+- [📁 下载所有 Markdown 源文件](https://github.com/gavin887/tangye-jingfa/archive/refs/heads/main.zip)
 
 ---
 
@@ -41,7 +41,7 @@ Docsify 直接在浏览器端渲染 Markdown，无需构建步骤。
 4. Branch 选择 `main`，文件夹选择 `/docs`
 5. 点击 **Save**
 
-> 等待几分钟,访问 `https://gavin887.github.io/tangye-jingfa/` 即可。
+> 等待几分钟，访问 `https://gavin887.github.io/tangye-jingfa/` 即可。
 
 已含文件：
 - `docs/index.html` —— Docsify 入口
