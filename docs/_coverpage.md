@@ -12,7 +12,7 @@
 
 <br>
 
-[开始阅读](README.md)
+[开始阅读](/#/README?id=目录)
 [下载 PDF](汤液经法拟补.修订版.20260628.pdf)
 
 <div style="margin-top: 2em; color: #999; font-size: 0.85em; line-height: 1.7; max-width: 600px;">
